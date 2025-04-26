@@ -1,5 +1,9 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
+    
 <!DOCTYPE html>
 <html>
 
@@ -25,16 +29,22 @@
             <form name="registerForm" method="post" action="registerController">
 
                 <label for="fullname"> Full Name: </label>
-                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                <input type="text" id="fullname" name="fullName" placeholder="Enter your full name" value="${fullName}" required>
 
                 <label for="email"> Email: </label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <input type="email" id="email" name="email" placeholder="Enter your email" value="${email}" required>
+                <c:if test="${not empty emailError}">
+                   <div style="color:red;">${emailError}</div>
+                </c:if>
 
                 <label for="password"> Password: </label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <input type="password" id="password" name="password" placeholder="Enter your password" value="${password}" required>
 
                 <label for="phone"> Phone: </label>
-                <input type="tel" id="phone" name="phoneNo" placeholder="Enter your phone number" required>
+                <input type="tel" id="phone" name="phoneNo" placeholder="Enter your phone number" value="${phoneNo}" required>
+                <c:if test="${not empty phoneError}">
+                  <div style="color:red;">${phoneError}</div>
+                </c:if>
 
                 <div class="button-container">
                 

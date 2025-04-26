@@ -29,7 +29,12 @@ public class LoginController extends HttpServlet {
 	
 		
 		//Saving the user inputs.
-	
+	    String email = req.getParameter("email");
+	    String password = req.getParameter("password");
+	    
+	    //Setting a specific name for the email & password, in order to use them in the .jsp file:
+	    req.setAttribute("email", email);
+	    req.setAttribute("password", password);
 		
 		
 		

@@ -4,10 +4,19 @@ public class UserRegistration {
 
 	
 //Instance Variables.
+private int id;
 private String fullName;
 private String email;
 private String password;
 private String phoneNo;
+
+
+public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
+}
 
 
 public String getFullName() {
