@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+/* Form Container Styles */
+#form-container {
+    max-width: 600px;
+    margin: 0 auto; /* Centering the form container */
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-family: "Poppins", sans-serif;
+}
+
+/* Form Title */
+#form-container h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600; /* Semi-bold for emphasis */
+    font-size: 32px;
+    color: #cb997e; /* Primary theme color */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Fields */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500; /* Medium weight for labels */
+    font-size: 16px;
+    color: #343a40; /* Dark color for readability */
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: #cb997e; /* Highlight border color */
+    outline: none;
+    box-shadow: 0 0 5px rgba(203, 153, 126, 0.5);
+}
+
+/* Buttons */
+#form-container .btn {
+    font-size: 16px;
+    font-weight: 500; /* Medium weight for buttons */
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-family: "Poppins", sans-serif;
+    border: none;
+}
+
+#form-container .btn-primary {
+    background-color: #cb997e; /* Primary button color */
+    color: #ffffff;
+}
+
+#form-container .btn-primary:hover {
+    background-color: #b58370; /* Darker shade for hover */
+}
+
+/* Additional Information Links */
+.additional-info {
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.additional-info a {
+    color: #cb997e; /* Primary link color */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.additional-info a:hover {
+    text-decoration: underline;
+    color: #b58370;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    #form-container {
+        padding: 15px;
+    }
+
+    #form-container h2 {
+        font-size: 28px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #form-container .btn {
+        font-size: 14px;
+    }
+
+    .additional-info {
+        font-size: 12px;
+    }
+}

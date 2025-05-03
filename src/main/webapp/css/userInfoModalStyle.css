@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+
+/* User Info Modal Styles */
+.modal-content {
+    border-radius: 10px;
+    background-color: #f8f9fa; /* Soft background color for better readability */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    font-family: "Poppins", serif;
+}
+
+.modal-header {
+    background-color: #cb997e; /* Match login page's primary color */
+    color: #ffffff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 15px 20px;
+}
+
+.modal-header .modal-title {
+    font-family: "Poppins", serif;
+    font-weight: 600; /* Semi-bold for emphasis */
+    font-size: 24px;
+    margin: 0;
+}
+
+.modal-header .close {
+    color: #ffffff;
+    font-size: 20px;
+    opacity: 0.8;
+    font-family: "Poppins", serif;
+    font-weight: 400; /* Regular weight */
+}
+
+.modal-header .close:hover {
+    color: #f8d7da; /* Softer hover color for the close button */
+    opacity: 1;
+}
+
+.modal-body {
+    font-family: "Poppins", serif;
+    font-weight: 300; /* Light weight for clean body text */
+    font-size: 16px;
+    color: #343a40;
+    padding: 15px 20px;
+    line-height: 1.6;
+}
+
+.modal-body p {
+    margin-bottom: 10px;
+}
+
+.modal-body strong {
+    font-weight: 700; /* Bold for highlighting */
+    color:#cb997e; /* Highlighted text color matching primary theme */
+    font-family: "Poppins", serif;
+}
+
+.modal-footer {
+    border-top: 1px solid #dee2e6;
+    padding: 10px 20px;
+    text-align: right;
+    background-color: #f8f9fa;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.modal-footer .btn {
+    font-size: 14px;
+    font-weight: 500; /* Medium weight for buttons */
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-family: "Poppins", serif;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #6c757d;
+    color: #ffffff;
+    border: none;
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.modal-footer .btn-primary {
+    background-color: #cb997e; /* Primary button color */
+    color: #ffffff;
+    border: none;
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: #cb997e;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 10px;
+    }
+    .modal-header, .modal-footer {
+        padding: 10px;
+    }
+    .modal-body {
+        font-size: 14px;
+    }
+}
+
+
+
+#heading-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700; /* Bold for emphasis */
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px 2px #ddbea9; /* Optional, for a decorative effect */
+    margin: 0;
+}

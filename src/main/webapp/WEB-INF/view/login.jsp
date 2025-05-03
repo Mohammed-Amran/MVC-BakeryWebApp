@@ -4,8 +4,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 	
 	
+	
 <!DOCTYPE html>
+
 <html>
+
 
 <head>
 
@@ -17,28 +20,36 @@
 </head>
 
 
+
 <body>
 
 
- <c:if test="${not empty insertingError}">
+<c:if test="${not empty loginError}">
     
     <script type="text/javascript">
     
-      alert('${dbError}');
+      alert('${loginError}');
       
     </script>
     
   </c:if>
 
-
-
+  
+  
+  
+  
 
 	<div id="main">
 
 		<div id="heading">
+		
 			<h1>Suli Bakery</h1>
-			<h4>Please log in to continue</h4>
+			
+			<h4 style="font-weight: bold;" >Please log in to continue</h4>
+			
 		</div>
+
+
 
 
 		<div class="card">
@@ -59,15 +70,14 @@
 			</form>
 
 
+
 			<div class="signup-link">
 		
                <p>Don't have an account? <a href="${pageContext.request.contextPath}/registerController">Sign Up</a></p>
 
 			</div>
 
-
 		</div>
-
 
 
 	</div>
@@ -80,4 +90,6 @@
 
 
 </body>
+
+
 </html>

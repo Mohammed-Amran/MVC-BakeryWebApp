@@ -1,0 +1,229 @@
+@charset "UTF-8";
+
+* {
+    font-family: "Poppins", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Headings */
+#heading-title {
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    margin: 20px 0;
+    color: #4a403a;
+}
+
+
+
+
+/* Body Styling */
+body {
+    background-color: #ddbea9;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Navigation Styles */
+.navtop {
+    overflow: hidden;
+    background-color: #cb997e;
+    padding: 10px;
+}
+
+.navtop a {
+    font-family: inherit;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 14px 16px;
+    color: black;
+    display: inline-block;
+}
+
+.navtop a:hover {
+    background-color: #7f5539;
+    color: white;
+    font-weight: 500;
+}
+
+
+/* Modal Styling */
+.modal-content {
+    border-radius: 8px;
+    background-color: #fefefe;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 10px;
+}
+
+.modal-title {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.modal-footer {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+
+
+/* Main Content */
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/* Card Styles */
+.card {
+    flex: 1 1 calc(33.33% - 20px);
+    background-color: white;
+    border: 2px solid #cb997e;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px; /* Adjusted for consistent layout */
+    padding: 10px;
+}
+
+.card-content img {
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover; /* Ensures the image fits well */
+}
+
+.card-content h1 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #4a403a;
+}
+
+.card-action {
+    margin-top: auto; /* Ensures the button is always at the bottom */
+    text-align: center;
+}
+
+.card-action button {
+    background-color: #cb997e;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-action button:hover {
+    background-color: #7f5539;
+    color: white;
+}
+
+
+
+/* Footer */
+#footer {
+    background-color: #cb997e;
+    color: #4a403a;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Space elements out across the row */
+    align-items: center; /* Align items vertically in the center */
+}
+
+/* Footer Contact (Phone Numbers on Left) */
+.footer__contact {
+    font-size: 18px;
+    color: black;
+    text-align: left;
+    flex: 1; /* Take up available space on the left */
+}
+
+/* Footer Email on Right */
+.footer__mail {
+    font-size: 18px;
+    color: black;
+    text-align: right;
+    flex: 1; /* Take up available space on the right */
+}
+
+/* Social Icons Container in the Center */
+.footer__social {
+    display: flex;
+    justify-content: center; /* Center the social icons */
+    align-items: center;
+    gap: 10px;
+    flex: 1; /* Take up space in the middle */
+}
+
+/* Social Icon Styles */
+.footer__social ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.footer__social ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.footer__social ul li a:hover {
+    color: white;
+}
+
+/* Responsive Design for Footer */
+@media screen and (max-width: 768px) {
+    #footer {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        text-align: center;
+    }
+
+    .footer__contact, .footer__mail {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .footer__social {
+        margin-top: 10px;
+    }
+}
+
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 920px) {
+    .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .card {
+        flex: 1 1 100%;
+    }
+}
+
