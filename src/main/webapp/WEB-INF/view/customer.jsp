@@ -1,5 +1,9 @@
 <%@ page language="java" session="true" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+	
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	
 
 <%
 
@@ -105,6 +109,7 @@ if(session == null || session.getAttribute("fullName") == null){
 
 				<div class="modal-body">
 
+                   <!-- 
 					<?php if (!empty($userDetails)): ?>
 					<p>
 						<strong>Name:</strong>
@@ -124,16 +129,23 @@ if(session == null || session.getAttribute("fullName") == null){
 
 					<?php endif; ?>
 
+                     -->
+
 				</div>
+
 
 				<div class="modal-footer">
 
-					<button type="button" class="btn btn-secondary"
-						data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-					<button class="btn btn-danger" onclick="logoutUser()">Logout</button>
+                 <form name="logOutForm" method="get" action="${pageContext.request.contextPath}/logOutController" style="display:inline;">
+
+					<button type="submit" class="btn btn-danger"> Logout </button>
+					
+				</form>	
 
 				</div>
+
 
 			</div>
 
@@ -1271,8 +1283,10 @@ if(session == null || session.getAttribute("fullName") == null){
 
 
   function logoutUser() {
-    // Send a logout request to the server
-    fetch('mainPage.php', {
+    
+	  // Send a logout request to the server
+    
+	  fetch('mainPage.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',

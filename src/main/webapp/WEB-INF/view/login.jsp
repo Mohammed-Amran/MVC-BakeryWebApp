@@ -49,6 +49,17 @@
   </c:if>
   
   
+ <!-- If the Logs out! this pop-up window will be shown --> 
+<c:if test="${not empty requestScope.logOutMessage}">
+    
+    <script type="text/javascript">
+    
+      alert('${requestScope.logOutMessage}');
+      
+    </script>
+    
+  </c:if> 
+  
   
 
 	<div id="main">
