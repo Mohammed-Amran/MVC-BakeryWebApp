@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import DAO.DaoClearCart;
+import DAO.DaoUsers;
+
 
 @WebServlet("/logOutController")
 public class LogoutController extends HttpServlet {
@@ -23,9 +26,29 @@ public class LogoutController extends HttpServlet {
 		
 		HttpSession session = req.getSession(false); //That false within the 'getSession(false)' is to not create if not exists
 		
+		String email = (String) session.getAttribute("email");
+		
+		
+		  //1st: Instantiate an object from the 'DaoUsers' class:
+		  DaoUsers daoObj = new DaoUsers();
+		
+		  //2nd: Access the 'retrieveId()' method via the 'daoObj':
+          String strId =  daoObj.retrieveId(email);
+		  int intId = Integer.parseInt(strId);
+		
+		  
+		  
+		
         if(session != null) {
         	
             session.invalidate(); // kill the session
+            
+            
+            DaoClearCart daoClearObj = new DaoClearCart();
+            
+            daoClearObj.clearCart(intId);
+            
+            
         }
 
         // Redirect to login page with a logout message

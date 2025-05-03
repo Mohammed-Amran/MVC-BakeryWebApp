@@ -143,7 +143,7 @@ public class DaoUsers {
 //================================================================================================================== 
     
     
-    
+//Retrieving the PhoneNo of user.
 public String retrievePhoneNo(String email, String pass) {
 	
 	
@@ -181,7 +181,41 @@ public String retrievePhoneNo(String email, String pass) {
 
 
 
+//Retrieving the id of user.
+public String retrieveId(String email) {
+	
+	
+	String sql = "SELECT id FROM users WHERE email = ?";
+	
+	try (Connection conn = getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
 
+      stmt.setString(1, email);
+     
+
+      try (ResultSet rs = stmt.executeQuery()) {
+      	
+          if (rs.next()) {
+          	
+              return rs.getString("id");
+              
+          }
+      }
+
+  } 
+	catch (SQLException e) {
+		
+      e.printStackTrace();
+  }
+
+  return "Unknown id"; // return Unknown phoneNo if not found or error occurs
+	
+	
+	
+}//closing brace of the 'retrieveId()' method.
+  
+  
+  
+//==================================================================================================================
 	
 	
 }//closing curly brace of the class.

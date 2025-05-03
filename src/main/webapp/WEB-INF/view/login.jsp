@@ -49,7 +49,7 @@
   </c:if>
   
   
- <!-- If the Logs out! this pop-up window will be shown --> 
+ <!-- If user Logs out! this pop-up window will be shown --> 
 <c:if test="${not empty requestScope.logOutMessage}">
     
     <script type="text/javascript">

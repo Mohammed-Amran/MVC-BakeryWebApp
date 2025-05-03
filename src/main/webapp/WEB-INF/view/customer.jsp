@@ -70,6 +70,20 @@ if(session == null || session.getAttribute("fullName") == null){
 
 <body>
 
+<!-- if adding item into the Cart failed! this message will be shown -->
+<c:if test="${not empty sessionScope.addToCartErrorMessage}">
+
+    <script type="text/javascript">
+    
+      alert('${sessionScope.addToCartMessage}');
+      
+    </script>
+
+</c:if>
+
+
+
+
 	<!--  N A V I G A T I O N   B A R  -->
 	<div class="topnav" id="myTopnav">
 
@@ -78,7 +92,7 @@ if(session == null || session.getAttribute("fullName") == null){
 
             <a href="" style="float: right;" data-toggle="modal" data-target="#userModal"> <i class="fas fa-user"></i> </a> 
 			
-            <a href="" style="float: right;" data-toggle="modal" data-target="#cart"> <i class="fas fa-shopping-cart"></i> <span class="cart-items"> ( 0 ) </span> </a> 
+            <a href="" style="float: right;" data-toggle="modal" data-target="#cart"> <i class="fas fa-shopping-cart"></i> <span class="cart-items"> ( ${sessionScope.cartCounter} ) </span> </a> 
 
             <a href="" style="float: right;" data-toggle="modal" data-target="#Inbox"> <i class="fas fa-box-open"></i> <span class="inbox-items"> ( 0 ) </span> </a>
 
@@ -425,6 +439,7 @@ if(session == null || session.getAttribute("fullName") == null){
 
 				<div class="modal-content">
 
+
 					<div class="modal-header">
 
 						<h5 class="modal-title" id="itemModalLabel"></h5>
@@ -432,35 +447,39 @@ if(session == null || session.getAttribute("fullName") == null){
 					</div>
 
 
+
+                   <form name="AddtoCartForm" method="post" action="addToCartController" id="itemForm">
+
+
 					<div class="modal-body">
 
 						<p id="itemDescription"></p>
 
-						<form id="itemForm">
+						
+							<select id="itemDropdown" class="price-dropdown" name="selectedQuantity">
 
-							<select id="itemDropdown" class="price-dropdown" name="selectQuantity">
-
-								<option value="2 pieces ~ 250iqd">2 pieces ~ 250iqd</option>
-								<option value="4 pieces ~ 500iqd">4 pieces ~ 500iqd</option>
-								<option value="8 pieces ~ 1000iqd">8 pieces ~ 1000iqd</option>
-								<option value="12 pieces ~ 1500iqd">12 pieces ~ 1500iqd</option>
+								<option value="2"> 2 pieces ~ 250iqd </option>
+								<option value="4"> 4 pieces ~ 500iqd </option>
+								<option value="8"> 8 pieces ~ 1000iqd </option>
+								<option value="12"> 12 pieces ~ 1500iqd </option>
 
 							</select>
-
-						</form>
-
+					
 					</div>
 
 
 					<div class="modal-footer">
 
-						<button type="button" class="btn btn-secondary"
-							data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal"> Close </button>
 
-						<button type="button" class="btn btn-primary"
-							onclick="addToCart()">Add to Cart</button>
+                         <input type="hidden" name="itemName" value="Baguette Bread">
+ 
+						<button type="submit" class="btn btn-primary" > Add to Cart </button>
 
 					</div>
+
+
+                   </form>
 
 				</div>
 
