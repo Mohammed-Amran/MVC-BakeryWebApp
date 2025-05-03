@@ -109,27 +109,38 @@ if(session == null || session.getAttribute("fullName") == null){
 
 				<div class="modal-body">
 
-                   <!-- 
-					<?php if (!empty($userDetails)): ?>
+                   
+					<c:choose>
+					
+					<c:when test="${not empty sessionScope.fullName && not empty sessionScope.email && not empty sessionScope.phoneNo }">
+					
 					<p>
 						<strong>Name:</strong>
-						<?php echo htmlspecialchars($userDetails['fullname']); ?>
+					    <span style="font-weight: 600; color: #000;"> <c:out value="${sessionScope.fullName}" /> </span>
 					</p>
+					
 					<p>
 						<strong>Email:</strong>
-						<?php echo htmlspecialchars($userDetails['email']); ?>
+						<span style="font-weight: 600; color: #000;"> <c:out value="${sessionScope.email}" /> </span>
 					</p>
+					
 					<p>
 						<strong>Phone:</strong>
-						<?php echo htmlspecialchars($userDetails['phone']); ?>
+						<span style="font-weight: 600; color: #000;"> <c:out value="${sessionScope.phoneNo}" /> </span>
 					</p>
-					<?php else: ?>
+					
+					</c:when>
 
-					<p>User details not available.</p>
+                    <c:otherwise>
+                     
+					   <p>User details not available.</p>
 
-					<?php endif; ?>
+                    </c:otherwise>
+                     
+                     
+					</c:choose>
 
-                     -->
+                     
 
 				</div>
 

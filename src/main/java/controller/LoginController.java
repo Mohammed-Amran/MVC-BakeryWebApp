@@ -57,6 +57,7 @@ public class LoginController extends HttpServlet {
 	    	HttpSession session = req.getSession(true);
 	    	
 	    	
+	    	
 	    	//Setting the essential user-info's to the session object! would be required for further steps:
 	    	session.setAttribute("fullName", fullName);
 	    	session.setAttribute("email", email);
