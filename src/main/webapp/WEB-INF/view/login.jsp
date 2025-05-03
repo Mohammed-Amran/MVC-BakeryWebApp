@@ -24,6 +24,7 @@
 <body>
 
 
+<!-- If login failed! this pop-up window will be shown -->
 <c:if test="${not empty loginError}">
     
     <script type="text/javascript">
@@ -34,7 +35,18 @@
     
   </c:if>
 
-  
+ 
+ 
+<!-- If session expired! this pop-up window will be shown --> 
+<c:if test="${not empty param.sessionExpiredMessage}">
+    
+    <script type="text/javascript">
+    
+      alert('${param.sessionExpiredMessage}');
+      
+    </script>
+    
+  </c:if>
   
   
   
