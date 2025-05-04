@@ -75,7 +75,7 @@ if(session == null || session.getAttribute("fullName") == null){
 
     <script type="text/javascript">
     
-      alert('${sessionScope.addToCartMessage}');
+      alert('${sessionScope.addToCarErrorMessage}');
       
     </script>
 
@@ -448,7 +448,7 @@ if(session == null || session.getAttribute("fullName") == null){
 
 
 
-                   <form name="AddtoCartForm" method="post" action="addToCartController" id="itemForm">
+                   <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm" autocomplete="off">
 
 
 					<div class="modal-body">
@@ -1082,24 +1082,7 @@ if(session == null || session.getAttribute("fullName") == null){
                      
                      
                      
- // Function to add the item to the cart
- function addToCart() {
 
-    const selectedOption = document.getElementById('itemDropdown').value; // Get selected option
-    
-    selectedItem.quantity = selectedOption; // Save selected quantity in selectedItem
-
-    // Extract the quantity and price (e.g., "2 pieces ~ 250iqd")
-    const [quantity, price] = selectedOption.split(" ~ ");
-    
-    // Call the existing add_to_cart function with item details
-    add_to_cart(selectedItem.id, selectedItem.title, price);
-
-   
-    // Close the modal
-    $('#itemModal').modal('hide');
-
- }//closing brace of the 'addToCart()' method.
 
 
  
@@ -1129,11 +1112,10 @@ if(session == null || session.getAttribute("fullName") == null){
 <!--********************************************************************************************************-->
 
 
-
 	
 <!-- JS Codes -->
 
-	<!-- Checkout modal JS code -->
+	<!-- Checkout modal JS code
 	<script>
 
     // Open Checkout Modal
@@ -1202,18 +1184,16 @@ if(session == null || session.getAttribute("fullName") == null){
         $('#cart').modal('hide');
 
 
-       
-
         document.querySelector('.inbox-items').textContent = `( ${x += 1} )`;
 
     }
 
 
-
-
 </script>
 
+-->
 
+<!--
 
 	<script>
 
@@ -1227,49 +1207,7 @@ if(session == null || session.getAttribute("fullName") == null){
   }
 
 
- function addToCart() {
-        const selectedOption = document.getElementById('itemDropdown').value;
-        const [quantityText, priceText] = selectedOption.split(" ~ ");
-        const quantity = parseInt(quantityText);
-        const price = parseInt(priceText.replace("iqd", "").trim());
-
-        const newItem = {
-            id: Date.now(),
-            title: document.getElementById('itemModalLabel').textContent,
-            quantity,
-            price
-        };
-
-        cart.push(newItem);
-        updateCart();
-        $('#itemModal').modal('hide');
- }
-
-
- function updateCart() {
-
-    const cartBody = document.querySelector('.cart-body');
-    cartBody.innerHTML = '';
-    totalPrice = 0;
-
-    cart.forEach((item, index) => {
-       
-        totalPrice += item.price;
-
-        cartBody.innerHTML += `
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <p><strong>${item.title}</strong> - ${item.quantity} pieces - ${item.price} IQD</p>
-                <div>
-                    <button class="btn btn-sm btn-success" onclick="increaseQuantity(${index})">Increase</button>
-                    <button class="btn btn-sm btn-warning" onclick="decreaseQuantity(${index})">Decrease</button>
-                    <button class="btn btn-sm btn-danger" onclick="removeItem(${index})">Remove</button>
-                </div>
-            </div>`;
-    });
-
-    document.getElementById('totalPrice').textContent = totalPrice;
-    document.querySelector('.cart-items').textContent = `( ${cart.length} )`;
-  }
+ 
 
 
   function increaseQuantity(index) {
@@ -1312,36 +1250,12 @@ if(session == null || session.getAttribute("fullName") == null){
   }
 
 
-  function logoutUser() {
-    
-	  // Send a logout request to the server
-    
-	  fetch('mainPage.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: 'logout=true',
-    })
-        .then((response) => response.json())
-        .then((data) => {
-            if (data.status === 'success') {
-                // Redirect to the login page
-                window.location.href = 'login.html';
-            } else {
-                alert('Error logging out: ' + (data.message || 'Please try again.'));
-            }
-        })
-        .catch((error) => {
-            console.error('Logout failed:', error);
-            alert('Error logging out. Please try again.');
-        });
-  }
+
 
 
 </script>
 
-
+  -->
 	
 
 

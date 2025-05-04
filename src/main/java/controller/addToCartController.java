@@ -38,6 +38,8 @@ public class addToCartController extends HttpServlet {
 	/*II*/String strSelectedQuantity = req.getParameter("selectedQuantity");
 		  int intSelectedQuantity = Integer.parseInt(strSelectedQuantity);
 	
+		  
+		  
 	      //retrieving the id of the user:
 		
 		  //1st: Instantiate an object from the 'DaoUsers' class:
@@ -49,6 +51,7 @@ public class addToCartController extends HttpServlet {
 		
 		 //Inserting the (id, itemName, selectedQuantity) into the cartItems table.
         
+		  
          //1st: Instantiating an object from the 'DoaAddToCart' class.
          DoaAddToCart daoAddToCartObj = new DoaAddToCart();
          
