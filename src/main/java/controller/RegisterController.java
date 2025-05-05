@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import DAO.DaoUsers;
-import model.UserRegistration;
+import DAO.*;
+import model.*;
 
 @WebServlet("/registerController")
 public class RegisterController extends HttpServlet {
@@ -20,30 +20,6 @@ public class RegisterController extends HttpServlet {
 	// Instantiating an object from the RequestDispatcher class.
 	RequestDispatcher disp;
 	
-	
-	//Email Validation
-	private static final Pattern EMAIL_REGEX = 
-		    Pattern.compile("^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$");
-
-	public boolean isEmailValid(String email) {
-		    return EMAIL_REGEX.matcher(email).matches();
-		}
-	
-	//--------------------------------------------------------------------------------------------------------------
-	
-	//Phone Number Validation
-	private static final Pattern PHONE_REGEX = 
-		    Pattern.compile("^07\\d{2}\\d{3}\\d{4}$");  // Ignores hyphens
-	
-	public boolean isPhoneNoValid(String phoneNo) {
-	    // Remove all non-digit characters first:
-	    String digitsOnly = phoneNo.replaceAll("[^0-9]", "");
-	    
-	    // Check if it matches 07xx-xxx-xxxx (without hyphens):
-	    return PHONE_REGEX.matcher(digitsOnly).matches();
-	}
-	
-	//--------------------------------------------------------------------------------------------------------------
 	
 	
 
@@ -73,18 +49,22 @@ public class RegisterController extends HttpServlet {
 		
 		
 		
-		
 	   //Checking the correctness of the email & phone number:
 		String emailError = null;
 		String phoneNoError = null;
 		
 		
-		if(!isEmailValid(email)) {
+		//1:Instantiating an object from the Auth class.
+		Auth authObj = new Auth();
+		
+		
+			
+		if( !authObj.isEmailValid(email) ) {
 			
 			emailError = "Invalid Email Format!";
 		}
 		
-		if(!isPhoneNoValid(phoneNo)) {
+		if(!authObj.isPhoneNumValid(phoneNo)) {
 			
 			phoneNoError = "Invalid Phone No. Format";
 		}
@@ -92,6 +72,8 @@ public class RegisterController extends HttpServlet {
 		
 		if(emailError != null || phoneNoError != null) {
 			
+			//so here, if the one of the Email & PhoneNum (or both) weren't correct!
+			//user will be returned back to the register.jsp page.
 			
 			//setting the already inputed fields, so that user do not required to re-enter them!			
 			req.setAttribute("fullName", fullName);

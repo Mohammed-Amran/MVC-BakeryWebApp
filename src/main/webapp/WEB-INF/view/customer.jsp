@@ -84,6 +84,9 @@ if(session == null || session.getAttribute("fullName") == null){
 
 
 
+
+
+
 	<!--  N A V I G A T I O N   B A R  -->
 	<div class="topnav" id="myTopnav">
 
@@ -618,33 +621,38 @@ if(session == null || session.getAttribute("fullName") == null){
 					</div>
 					
 					
+					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm" autocomplete="off">
+
+
 					<div class="modal-body">
-					
+
 						<p id="itemDescription"></p>
+
 						
-						<form id="itemForm">
-						
-							<select id="itemDropdown" class="price-dropdown" name="selectQuantity">
-							
-								<option value=" 2 pieces ~ 250iqd"> 2 pieces ~ 250iqd </option>
-								<option value="4 pieces ~ 500iqd"> 4 pieces ~ 500iqd </option>
-								<option value="8 pieces ~ 1000iqd"> 8 pieces ~ 1000iqd </option>
-								<option value="12pieces ~ 1500iqd"> 12 pieces ~ 1500iqd </option>
-								
+							<select id="itemDropdown" class="price-dropdown" name="selectedQuantity">
+
+								<option value="2"> 2 pieces ~ 250iqd </option>
+								<option value="4"> 4 pieces ~ 500iqd </option>
+								<option value="8"> 8 pieces ~ 1000iqd </option>
+								<option value="12"> 12 pieces ~ 1500iqd </option>
+
 							</select>
-							
-						</form>
-						
+					
 					</div>
-					
-					
+
+
 					<div class="modal-footer">
-					
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						
-						<button type="button" class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
-						
+
+						<button type="button" class="btn btn-secondary" data-dismiss="modal"> Close </button>
+
+                         <input type="hidden" name="itemName" value="Brioche Bread">
+ 
+						<button type="submit" class="btn btn-primary" > Add to Cart </button>
+
 					</div>
+
+
+                   </form>
 					
 				</div>
 				
@@ -689,32 +697,38 @@ if(session == null || session.getAttribute("fullName") == null){
 						
 					</div>
 					
+					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm" autocomplete="off">
+
+
 					<div class="modal-body">
-					
+
 						<p id="itemDescription"></p>
+
 						
-						<form id="itemForm">
-						
-							<select id="itemDropdown" class="price-dropdown" name="selectQuantity">
-							
-								<option value=" 2 pieces ~ 250iqd">2 pieces ~ 250iqd</option>
-								<option value="4 pieces ~ 500iqd">4 pieces ~ 500iqd</option>
-								<option value="8 pieces ~ 1000iqd">8 pieces ~ 1000iqd</option>
-								<option value="12pieces ~ 1500iqd">12 pieces ~ 1500iqd </option>
-								
+							<select id="itemDropdown" class="price-dropdown" name="selectedQuantity">
+
+								<option value="2"> 2 pieces ~ 250iqd </option>
+								<option value="4"> 4 pieces ~ 500iqd </option>
+								<option value="8"> 8 pieces ~ 1000iqd </option>
+								<option value="12"> 12 pieces ~ 1500iqd </option>
+
 							</select>
-							
-						</form>
-						
-					</div>
 					
+					</div>
+
+
 					<div class="modal-footer">
-					
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						
-						<button type="button" class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
-						
+
+						<button type="button" class="btn btn-secondary" data-dismiss="modal"> Close </button>
+
+                         <input type="hidden" name="itemName" value="Ciabatta Bread">
+ 
+						<button type="submit" class="btn btn-primary" > Add to Cart </button>
+
 					</div>
+
+
+                   </form>
 					
 				</div>
 				
@@ -760,33 +774,38 @@ if(session == null || session.getAttribute("fullName") == null){
 					</div>
 					
 					
+					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm" autocomplete="off">
+
+
 					<div class="modal-body">
-						
+
 						<p id="itemDescription"></p>
+
 						
-						<form id="itemForm">
-							
-							<select id="itemDropdown" class="price-dropdown"name="selectQuantity">
-								
-								<option value=" 2 pieces ~ 250iqd">2 pieces ~ 250iqd</option>
-								<option value="4 pieces ~ 500iqd">4 pieces ~ 500iqd</option>
-								<option value="8 pieces ~ 1000iqd">8 pieces ~ 1000iqd</option>
-								<option value="12pieces ~ 1500iqd">12 pieces ~ 1500iqd</option>
-							
+							<select id="itemDropdown" class="price-dropdown" name="selectedQuantity">
+
+								<option value="2"> 2 pieces ~ 250iqd </option>
+								<option value="4"> 4 pieces ~ 500iqd </option>
+								<option value="8"> 8 pieces ~ 1000iqd </option>
+								<option value="12"> 12 pieces ~ 1500iqd </option>
+
 							</select>
-							
-						</form>
-						
+					
 					</div>
-					
-					
+
+
 					<div class="modal-footer">
-					
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						
-						<button type="button" class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
-					
+
+						<button type="button" class="btn btn-secondary" data-dismiss="modal"> Close </button>
+
+                         <input type="hidden" name="itemName" value="Multigrain Bread">
+ 
+						<button type="submit" class="btn btn-primary" > Add to Cart </button>
+
 					</div>
+
+
+                   </form>
 				
 				</div>
 			
@@ -830,32 +849,38 @@ if(session == null || session.getAttribute("fullName") == null){
 					
 					</div>
 					
+					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm" autocomplete="off">
+
+
 					<div class="modal-body">
-						
+
 						<p id="itemDescription"></p>
+
 						
-						<form id="itemForm">
-						
-							<select id="itemDropdown" class="price-dropdown" name="selectQuantity">
-								
-								<option value=" 2 pieces ~ 250iqd">2 pieces ~ 250iqd</option>
-								<option value="4 pieces ~ 500iqd">4 pieces ~ 500iqd</option>
-								<option value="8 pieces ~ 1000iqd">8 pieces ~ 1000iqd</option>
-								<option value="12pieces ~ 1500iqd">12 pieces ~ 1500iqd</option>
-								
+							<select id="itemDropdown" class="price-dropdown" name="selectedQuantity">
+
+								<option value="2"> 2 pieces ~ 250iqd </option>
+								<option value="4"> 4 pieces ~ 500iqd </option>
+								<option value="8"> 8 pieces ~ 1000iqd </option>
+								<option value="12"> 12 pieces ~ 1500iqd </option>
+
 							</select>
-							
-						</form>
-						
-					</div>
 					
+					</div>
+
+
 					<div class="modal-footer">
-					
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						
-						<button type="button" class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
-						
+
+						<button type="button" class="btn btn-secondary" data-dismiss="modal"> Close </button>
+
+                         <input type="hidden" name="itemName" value="Whole Wheat">
+ 
+						<button type="submit" class="btn btn-primary" > Add to Cart </button>
+
 					</div>
+
+
+                   </form>
 					
 				</div>
 				
@@ -899,34 +924,38 @@ if(session == null || session.getAttribute("fullName") == null){
 						
 					</div>
 					
-					<div class="modal-body">
-					
-						<p id="itemDescription"></p>
-						
-						<form id="itemForm">
+					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm" autocomplete="off">
 
-							<select id="itemDropdown" class="price-dropdown" name="selectQuantity">
-							
-								<option value=" 2 pieces ~ 250iqd">2 pieces ~ 250iqd</option>
-								<option value="4 pieces ~ 500iqd">4 pieces ~ 500iqd</option>
-								<option value="8 pieces ~ 1000iqd">8 pieces ~ 1000iqd</option>
-								<option value="12 pieces ~ 1500iqd">12 pieces ~ 1500iqd
-								</option>
+
+					<div class="modal-body">
+
+						<p id="itemDescription"></p>
+
+						
+							<select id="itemDropdown" class="price-dropdown" name="selectedQuantity">
+
+								<option value="2"> 2 pieces ~ 250iqd </option>
+								<option value="4"> 4 pieces ~ 500iqd </option>
+								<option value="8"> 8 pieces ~ 1000iqd </option>
+								<option value="12"> 12 pieces ~ 1500iqd </option>
 
 							</select>
-							
-						</form>
-						
+					
 					</div>
-					
-					
+
+
 					<div class="modal-footer">
-					
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						
-						<button type="button" class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
-						
+
+						<button type="button" class="btn btn-secondary" data-dismiss="modal"> Close </button>
+
+                         <input type="hidden" name="itemName" value="Lavash Bread">
+ 
+						<button type="submit" class="btn btn-primary" > Add to Cart </button>
+
 					</div>
+
+
+                   </form>
 					
 					
 				</div>
@@ -971,32 +1000,38 @@ if(session == null || session.getAttribute("fullName") == null){
 					
 					</div>
 					
+					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm" autocomplete="off">
+
+
 					<div class="modal-body">
-					
+
 						<p id="itemDescription"></p>
+
 						
-						<form id="itemForm">
-							
-							<select id="itemDropdown" class="price-dropdown" name="selectQuantity">
-								
-								<option value=" 2 pieces ~ 250iqd">2 pieces ~ 250iqd</option>
-								<option value="4 pieces ~ 500iqd">4 pieces ~ 500iqd</option>
-								<option value="8 pieces ~ 1000iqd">8 pieces ~ 1000iqd</option>
-								<option value="12pieces ~ 1500iqd">12 pieces ~ 1500iqd</option>
+							<select id="itemDropdown" class="price-dropdown" name="selectedQuantity">
+
+								<option value="2"> 2 pieces ~ 250iqd </option>
+								<option value="4"> 4 pieces ~ 500iqd </option>
+								<option value="8"> 8 pieces ~ 1000iqd </option>
+								<option value="12"> 12 pieces ~ 1500iqd </option>
 
 							</select>
-							
-						</form>
-						
-					</div>
 					
+					</div>
+
+
 					<div class="modal-footer">
-					
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						
-						<button type="button" class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
-						
+
+						<button type="button" class="btn btn-secondary" data-dismiss="modal"> Close </button>
+
+                         <input type="hidden" name="itemName" value="Thin Bread">
+ 
+						<button type="submit" class="btn btn-primary" > Add to Cart </button>
+
 					</div>
+
+
+                   </form>
 					
 				</div>
 				
@@ -1040,32 +1075,38 @@ if(session == null || session.getAttribute("fullName") == null){
 					
 					</div>
 					
+					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm" autocomplete="off">
+
+
 					<div class="modal-body">
-						
+
 						<p id="itemDescription"></p>
+
 						
-						<form id="itemForm">
-							
-							<select id="itemDropdown" class="price-dropdown" name="selectQuantity">
-								
-								<option value=" 2 pieces ~ 250iqd">2 pieces ~ 250iqd</option>
-								<option value="4 pieces ~ 500iqd">4 pieces ~ 500iqd</option>
-								<option value="8 pieces ~ 1000iqd">8 pieces ~ 1000iqd</option>
-								<option value="12pieces ~ 1500iqd">12 pieces ~ 1500iqd</option>
+							<select id="itemDropdown" class="price-dropdown" name="selectedQuantity">
+
+								<option value="2"> 2 pieces ~ 250iqd </option>
+								<option value="4"> 4 pieces ~ 500iqd </option>
+								<option value="8"> 8 pieces ~ 1000iqd </option>
+								<option value="12"> 12 pieces ~ 1500iqd </option>
 
 							</select>
-							
-						</form>
-						
-					</div>
 					
+					</div>
+
+
 					<div class="modal-footer">
-					
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						
-						<button type="button" class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
-					
+
+						<button type="button" class="btn btn-secondary" data-dismiss="modal"> Close </button>
+
+                         <input type="hidden" name="itemName" value="Naan Bread">
+ 
+						<button type="submit" class="btn btn-primary" > Add to Cart </button>
+
 					</div>
+
+
+                   </form>
 				
 				</div>
 			
@@ -1111,32 +1152,38 @@ if(session == null || session.getAttribute("fullName") == null){
 					
 					</div>
 					
+				 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm" autocomplete="off">
+
+
 					<div class="modal-body">
-						
+
 						<p id="itemDescription"></p>
+
 						
-						<form id="itemForm">
-							
-							<select id="itemDropdown" class="price-dropdown" name="selectQuantity">
-								
-								<option value=" 2 pieces ~ 250iqd">2 pieces ~ 250iqd</option>
-								<option value="4 pieces ~ 500iqd">4 pieces ~ 500iqd</option>
-								<option value="8 pieces ~ 1000iqd">8 pieces ~ 1000iqd</option>
-								<option value="12pieces ~ 1500iqd">12 pieces ~ 1500iqd</option>
+							<select id="itemDropdown" class="price-dropdown" name="selectedQuantity">
+
+								<option value="2"> 2 pieces ~ 250iqd </option>
+								<option value="4"> 4 pieces ~ 500iqd </option>
+								<option value="8"> 8 pieces ~ 1000iqd </option>
+								<option value="12"> 12 pieces ~ 1500iqd </option>
 
 							</select>
-							
-						</form>
-						
-					</div>
 					
+					</div>
+
+
 					<div class="modal-footer">
-						
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						
-						<button type="button" class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
-					
+
+						<button type="button" class="btn btn-secondary" data-dismiss="modal"> Close </button>
+
+                         <input type="hidden" name="itemName" value="Tortilla">
+ 
+						<button type="submit" class="btn btn-primary" > Add to Cart </button>
+
 					</div>
+
+
+                   </form>
 				
 				</div>
 			
@@ -1149,211 +1196,49 @@ if(session == null || session.getAttribute("fullName") == null){
 
 
 
- <script>
 
- let selectedItem = {}; // Object to hold the selected item details
+
+
+ </div> <!-- End of Main Div -->
+
+
+
+<script>
+
+//This 'openModal()' method! allows us to select the items & and be able to Add them into the cart.
+
+ let selectedItem = {}; // Object to hold the details of the selected item.
 
  // Function to open the modal and populate details
  function openModal(id, title, description) {
 	 
-                                              selectedItem.id = id; // Save item ID
-                                              
-                                              selectedItem.title = title; // Save item title
-                                              
-                                              document.getElementById('itemModalLabel').textContent = title;
-                                              
-                                              document.getElementById('itemDescription').textContent = description;
-
-   
-                                              // Open the modal
-                                              $('#itemModal').modal('show');
-                                              
-                     }//closing brace of the 'openModal()' method.
-
-
-                     
-  //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                   
-                     
-                     
-                     
-
-
-
- 
-//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- 
- 
-
-</script>
-
-
-
-
-<!--********************************************************************************************************-->
-
-
-
- </div>
-	<!-- End of Main Div -->
-
-
-
-	
-
-
-
-
-<!--********************************************************************************************************-->
-
-
-	
-<!-- JS Codes -->
-
-	<!-- Checkout modal JS code
-	<script>
-
-    // Open Checkout Modal
-    function Checkout() {
-    	
-                         updateCheckoutModal();
-                         
-                         $('#checkoutModal').modal('show');
-                         
-    }//closing brace of the 'Checkout()' method.
-
+    selectedItem.id = id; // Save item ID
     
-    // Update Checkout Modal Content
-    function updateCheckoutModal() {
-    	
-        const checkoutCartBody = document.querySelector('.checkout-cart-body');
-        
-        checkoutCartBody.innerHTML = '';
-        
-        let checkoutTotal = 0;
-
-        cart.forEach((item, index) => {
-        	
-            checkoutTotal += item.price;
-            
-            checkoutCartBody.innerHTML += `
-            
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                
-                    <p><strong>${item.title}</strong> - ${item.quantity} pieces - ${item.price} IQD</p>
-                    
-                    <div>
-                    
-                        <button class="btn btn-sm btn-danger" onclick="removeItem(${index}); updateCheckoutModal();">Remove</button>
-                        
-                    </div>
-                    
-                </div>`;
-        });
-
-        
-        document.getElementById('checkoutTotalPrice').textContent = checkoutTotal;
-        
-        
-    }//closing brace of the 'updateCheckoutModal()' method.
-
+    selectedItem.title = title; // Save item title
     
-    let x = 0;
+    document.getElementById('itemModalLabel').textContent = title;
+    
+    document.getElementById('itemDescription').textContent = description;
 
-    // Process Delivery (Placeholder for your backend integration)
-    function processDelivery() {
-        const city = document.getElementById('citySelect').value;
-        const address = document.getElementById('addressInput').value;
-
-        if (!city || !address) {
-            alert('Please fill in all the fields.');
-            return;
-        }
-
-        alert(`Order placed successfully!\nCity: ${city}\nAddress: ${address}`);
-        
-        // Reset cart and modal
-        cart = [];
-        updateCart();
-        $('#checkoutModal').modal('hide');
-        $('#cart').modal('hide');
-
-
-        document.querySelector('.inbox-items').textContent = `( ${x += 1} )`;
-
-    }
-
-
-</script>
-
--->
-
-<!--
-
-	<script>
-
- let cart = [];
- let totalPrice = 0;
-
- function openModal(id, title, description) {
-        document.getElementById('itemModalLabel').textContent = title;
-        document.getElementById('itemDescription').textContent = description;
-        $('#itemModal').modal('show');
-  }
-
-
- 
-
-
-  function increaseQuantity(index) {
-    const item = cart[index];
-    const dropdown = document.getElementById('itemDropdown');
-    const options = Array.from(dropdown.options).map(option => option.value.split(" ~ "));
-
-    const currentOption = options.find(([qty]) => parseInt(qty) === item.quantity);
-    const currentIndex = options.indexOf(currentOption);
-
-    if (currentIndex < options.length - 1) {
-        const [newQuantity, newPrice] = options[currentIndex + 1];
-        item.quantity = parseInt(newQuantity);
-        item.price = parseInt(newPrice.replace("iqd", "").trim());
-    }
-    updateCart();
- }
-
-
-  function decreaseQuantity(index) {
-    const item = cart[index];
-    const dropdown = document.getElementById('itemDropdown');
-    const options = Array.from(dropdown.options).map(option => option.value.split(" ~ "));
-
-    const currentOption = options.find(([qty]) => parseInt(qty) === item.quantity);
-    const currentIndex = options.indexOf(currentOption);
-
-    if (currentIndex > 0) {
-        const [newQuantity, newPrice] = options[currentIndex - 1];
-        item.quantity = parseInt(newQuantity);
-        item.price = parseInt(newPrice.replace("iqd", "").trim());
-    }
-    updateCart();
- }
-
-
-  function removeItem(index) {
-    cart.splice(index, 1);
-    updateCart();
-  }
-
+    // Open the modal
+    $('#itemModal').modal('show');
+    
+    
+ }//closing brace of the 'openModal()' method.
 
 
 
 
 </script>
 
-  -->
 	
+		
 
 
 <!--********************************************************************************************************-->
+
+
+
 
 
 

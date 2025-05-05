@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import DAO.DaoClearCart;
-import DAO.DaoUsers;
+import DAO.*;
+
 
 
 @WebServlet("/logOutController")
@@ -44,7 +44,7 @@ public class LogoutController extends HttpServlet {
             session.invalidate(); // kill the session
             
             
-            DaoClearCart daoClearObj = new DaoClearCart();
+            daoCart daoClearObj = new daoCart();
             
             daoClearObj.clearCart(intId);
             
@@ -65,6 +65,7 @@ public class LogoutController extends HttpServlet {
 	}//closing brace of the 'doGet()' method.
 	
 	
+		
 	
 	
 }//closing brace of the class.

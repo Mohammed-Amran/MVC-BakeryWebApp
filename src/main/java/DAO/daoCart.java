@@ -142,8 +142,28 @@ public class daoCart {
 	}//closing brace of the 'getCartItemByUserId' method.
    
    
+ //=====================================================================================================-============= 
    
-   	
+   
+ //This method will clear out all added items related to user with id = ?
+ 	public void clearCart(int userId) {
+ 		
+ 	    String sql = "DELETE FROM cartItems WHERE id = ?";
+
+ 	    try (Connection conn = getConnection();
+ 	    		
+ 	         PreparedStatement stmt = conn.prepareStatement(sql)) {
+ 	         
+ 	        stmt.setInt(1, userId);
+ 	        stmt.executeUpdate();
+
+ 	    } 
+ 	    catch (SQLException e) {
+ 	    	
+ 	        e.printStackTrace();
+ 	    }
+ 	    
+ 	}//closing brace of the 'clearCart()' method.
 	
 	
 	
