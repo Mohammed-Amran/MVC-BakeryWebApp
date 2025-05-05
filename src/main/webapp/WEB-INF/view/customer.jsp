@@ -292,9 +292,7 @@ if(session == null || session.getAttribute("fullName") == null){
                               <span class="item-price"> <strong> Price </strong> </span>
                            
                            </div>
-					       
-					
-					
+					   
 					
 					
 					       <!-- Looping through the items -->
@@ -530,7 +528,7 @@ if(session == null || session.getAttribute("fullName") == null){
 
 
 		<!-- Item Selection Modal for Item 1 -->
-		<div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal fade" id="itemModal1" tabindex="-1" role="dialog" aria-hidden="true">
 
 			<div class="modal-dialog" role="document">
 
@@ -545,7 +543,7 @@ if(session == null || session.getAttribute("fullName") == null){
 
 
 
-                   <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm" autocomplete="off">
+                   <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm1" autocomplete="off">
 
 
 					<div class="modal-body">
