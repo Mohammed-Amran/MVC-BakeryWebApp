@@ -92,7 +92,7 @@ if(session == null || session.getAttribute("fullName") == null){
 
             <a href="" style="float: right;" data-toggle="modal" data-target="#userModal"> <i class="fas fa-user"></i> </a> 
 			
-            <a href="" style="float: right;" data-toggle="modal" data-target="#cart"> <i class="fas fa-shopping-cart"></i> <span class="cart-items"> ( ${sessionScope.cartCounter} ) </span> </a> 
+            <a href="" style="float: right;" data-toggle="modal" data-target="#cart"> <i class="fas fa-shopping-cart"></i> <span class="cart-items"> (<c:if test="${empty sessionScope.cartCounter }"> 0 </c:if> ${sessionScope.cartCounter} ) </span> </a> 
 
             <a href="" style="float: right;" data-toggle="modal" data-target="#Inbox"> <i class="fas fa-box-open"></i> <span class="inbox-items"> ( 0 ) </span> </a>
 
@@ -270,15 +270,109 @@ if(session == null || session.getAttribute("fullName") == null){
 				
 				<div class="modal-body">
 					
-					<div class="cart-body"></div>
 					
-					<p style="font-size: 20px; margin-top: 5px;">
-						
-						<strong>Total Price: </strong><span id="totalPrice">0</span> IQD
+					<!-- Here's the region where the list of the selected items are shown -->
+					<div class="cart-body">
 					
-					</p>
+					
+					<c:choose>
+					
+					  <c:when test="${not empty sessionScope.retrievedCartItems}">
+					
+					
+					       <div class="cart-item-header">
+                             
+                              <span class="item-name"> <strong> Item Name </strong> </span>
+ 
+                              <span class="item-quantity"> <strong> Quantity </strong> </span>
+ 
+                              <span class="item-price"> <strong> Price </strong> </span>
+                           
+                           </div>
+					       
+					
+					
+					
+					
+					       <!-- Looping through the items -->
+					       <c:forEach var="x" items="${sessionScope.retrievedCartItems}">
+					       
+					          <div class="cart-item">
+					          
+					           <div class="cart-item-row">
+                                  
+                                   <span class="item-name"> <strong> <c:out value="${x.itemName}" /> </strong> </span>
+  
+                                   <span class="item-quantity"> <c:out value="${x.selectedQuantity}" /> </span>
+ 
+                                   <span class="item-price"> <c:out value="${x.selectedQuantity * 125}" /> IQD </span>
+              
+                               </div>
+
+					          
+					          </div>
+					       
+					       </c:forEach>
+					
+					  </c:when>
+					
+					
+					  <c:otherwise>
+                             
+                             <div class="empty-cart">
+                   
+                                <i class="fas fa-shopping-cart"></i>
+                                <p>Your cart is empty</p>
+               
+                             </div>
+                     
+                     </c:otherwise>
+					
+					
+					</c:choose>
+					
+					
+					</div>
+					
+					
+					
+					<%-- Total Price --%>
+                    <div class="total-price-container">
+                       
+                       <div class="total-line">
+                         
+                         <strong>Total:</strong>
+        
+                           <span id="totalPrice">
+                                 
+                                  <c:if test="${not empty sessionScope.retrievedCartItems}">
+                
+                                       <c:set var="total" value="0"/>
+                                       
+                                       <c:forEach var="x" items="${sessionScope.retrievedCartItems}">
+                    
+                                           <c:set var="total" value="${total + (x.selectedQuantity * 125)}"/>
+                
+                                       </c:forEach>
+               
+                                    ${total}
+           
+                                  </c:if>
+           
+                            <c:if test="${empty sessionScope.retrievedCartItems}">0</c:if>
+          
+                               IQD
+        
+                          </span>
+   
+                    </div>
+        
+                 </div> <!-- Closing brace of the 'total-price-container' -->
+
+			
 				
-				</div>
+				
+				</div> <!-- Closing brace of the modal-body -->
 				
 				
 				<div class="modal-footer">

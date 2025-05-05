@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import DAO.*;
+import model.cartItems;
 
 @WebServlet("/addToCartController")
 public class addToCartController extends HttpServlet {
@@ -28,7 +31,7 @@ public class addToCartController extends HttpServlet {
 		String email = (String) session.getAttribute("email");
 		 
 		
-		//3 things required to the into the Cart!, :
+		//3 things are required to be inserted into the Cart!, :
 		     // I. The itemName
 		     // II. The selectedQuantity of the item
 		     // III. The id of the user that has added this item into the Cart.
@@ -40,20 +43,20 @@ public class addToCartController extends HttpServlet {
 	
 		  
 		  
-	      //retrieving the id of the user:
+  /*III*/    //retrieving the id of the user:
 		
 		  //1st: Instantiate an object from the 'DaoUsers' class:
 		  DaoUsers daoObj = new DaoUsers();
 		
 		  //2nd: Access the 'retrieveId()' method via the 'daoObj':
- /*III*/  String strId =  daoObj.retrieveId(email);
+          String strId =  daoObj.retrieveId(email);
 		  int intId = Integer.parseInt(strId);
 		
-		 //Inserting the (id, itemName, selectedQuantity) into the cartItems table.
-        
 		  
+		 //Inserting the (id, itemName, selectedQuantity) into the cartItems table.
+        		  
          //1st: Instantiating an object from the 'DoaAddToCart' class.
-         DoaAddToCart daoAddToCartObj = new DoaAddToCart();
+         daoCart daoAddToCartObj = new daoCart();
          
          
          //2nd: calling the 'insertIntoCartItem' method via the 'doaAddToCartObj'.
@@ -63,16 +66,43 @@ public class addToCartController extends HttpServlet {
         
 		if(isInserted) {
 			
-			
+			//1st:
 			//retrieving the items number in the 'cartItems' table.
 			int itemsCount = daoAddToCartObj.getCartItemCount(intId);
 			
 			session.setAttribute("cartCounter", itemsCount); 
 			
 			
-			 disp = req.getRequestDispatcher("/WEB-INF/view/customer.jsp");
-			 disp.forward(req, resp);
-			 
+			//2nd:
+			//getting the Items from the cartItems table.
+			
+			//I.: Instantiating an object from the daoCart class.
+			daoCart daoCartObj = new daoCart();
+			
+			//II.: Accessing the 'getCartItemsByUserId' method - to retrieve the items in the cart for that specific user.
+		    try {
+				
+		    	List<cartItems> retrievedItems = daoCartObj.getCartItemsByUserId(intId);
+		    	
+		    	session.setAttribute("retrievedCartItems", retrievedItems);
+		    	
+		    	resp.sendRedirect(req.getContextPath() + "/forwardingToCustomer");
+		    	
+		    	
+			} 
+		    catch (Exception e) {
+				
+				String failedRetrievingItemsMessage = "Failed to retrieve cartItems!";
+				session.setAttribute("itemRetrievalErrorMessage", failedRetrievingItemsMessage);
+				
+				
+				resp.sendRedirect(req.getContextPath() + "/forwardingToCustomer");
+			}
+			
+			
+			
+			
+					 
 		}
 		else {
 			
@@ -80,13 +110,17 @@ public class addToCartController extends HttpServlet {
 			
 			session.setAttribute("addToCarErrorMessage", addToCartError);
 			
-			disp = req.getRequestDispatcher("/WEB-INF/view/customer.jsp");
-			disp.forward(req, resp);
 			
+			 resp.sendRedirect(req.getContextPath() + "/forwardingToCustomer");			
 		}
 		
 		
-	}//closing brace of the 'doGet()' method.
+		
+		
+		
+		
+		
+	}//closing brace of the 'doPost()' method.
 	
 	
 	

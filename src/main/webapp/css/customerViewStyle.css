@@ -18,6 +18,120 @@
 }
 
 
+/*=========================- Cart items Style -=========================*/
+
+
+/* Cart Items Display */
+.cart-body {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.cart-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0e6dd;
+}
+
+.cart-item p {
+    margin: 0;
+    color: #4a403a;
+}
+
+.item-details {
+    color: #7f5539;
+    font-size: 14px;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 20px;
+    color: #cb997e;
+}
+
+.empty-cart i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.total-price-container {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 2px solid #cb997e;
+}
+
+#totalPrice {
+    float: right;
+    color: #7f5539;
+    font-weight: bold;
+}
+
+
+
+
+/*This section below is responsible for the header, items and the Total price row layout in the cart*/
+
+/* Cart Item Header & Row Styles */
+.cart-item-header,
+.cart-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0e6dd;
+    column-gap: 20px; /* ✅ Adds space between columns */
+}
+
+.cart-item-header {
+    border-bottom: 2px solid #7f5539;
+    font-weight: bold;
+    background-color: #f2e9e4;
+    color: #4a403a;
+}
+
+.cart-item-header span,
+.cart-item-row span {
+    flex: 1;
+    padding: 0 10px;
+}
+
+/* Text Alignment for Columns */
+.item-name {
+    text-align: left;
+}
+
+.item-quantity {
+    text-align: center;
+}
+
+.item-price {
+    text-align: right;
+}
+
+
+/*This code snippet is responsible for the Total price label and the Total Price number at the end of the Cart*/
+.total-price-container {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 2px solid #cb997e;
+}
+
+.total-line {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px; /* space between "Total:" and price */
+    font-weight: bold;
+    color: #7f5539;
+    font-size: 16px;
+}
+
+
+
+
+/*==================================================================================================*/
+
+
 
 
 /* Body Styling */
