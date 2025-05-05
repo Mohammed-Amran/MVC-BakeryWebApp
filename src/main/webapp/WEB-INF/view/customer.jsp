@@ -608,7 +608,7 @@ if(session == null || session.getAttribute("fullName") == null){
 
 
 		<!-- Item Selection Modal for Item 2 -->
-		<div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal fade" id="itemModal2" tabindex="-1" role="dialog" aria-hidden="true">
 		
 			<div class="modal-dialog" role="document">
 			
@@ -621,7 +621,7 @@ if(session == null || session.getAttribute("fullName") == null){
 					</div>
 					
 					
-					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm" autocomplete="off">
+					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm2" autocomplete="off">
 
 
 					<div class="modal-body">
@@ -685,7 +685,7 @@ if(session == null || session.getAttribute("fullName") == null){
 
 
 		<!-- Item Selection Modal for Item 3 -->
-		<div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal fade" id="itemModal3" tabindex="-1" role="dialog" aria-hidden="true">
 			
 			<div class="modal-dialog" role="document">
 				
@@ -697,7 +697,7 @@ if(session == null || session.getAttribute("fullName") == null){
 						
 					</div>
 					
-					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm" autocomplete="off">
+					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm3" autocomplete="off">
 
 
 					<div class="modal-body">
@@ -761,7 +761,7 @@ if(session == null || session.getAttribute("fullName") == null){
 
 
 		<!-- Item Selection Modal for Item 4 -->
-		<div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal fade" id="itemModal4" tabindex="-1" role="dialog" aria-hidden="true">
 			
 			<div class="modal-dialog" role="document">
 				
@@ -774,7 +774,7 @@ if(session == null || session.getAttribute("fullName") == null){
 					</div>
 					
 					
-					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm" autocomplete="off">
+					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm4" autocomplete="off">
 
 
 					<div class="modal-body">
@@ -837,7 +837,7 @@ if(session == null || session.getAttribute("fullName") == null){
 
 
 		<!-- Item Selection Modal for Item 5 -->
-		<div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal fade" id="itemModal5" tabindex="-1" role="dialog" aria-hidden="true">
 			
 			<div class="modal-dialog" role="document">
 				
@@ -849,7 +849,7 @@ if(session == null || session.getAttribute("fullName") == null){
 					
 					</div>
 					
-					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm" autocomplete="off">
+					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm5" autocomplete="off">
 
 
 					<div class="modal-body">
@@ -912,7 +912,7 @@ if(session == null || session.getAttribute("fullName") == null){
 
 
 		<!-- Item Selection Modal for Item 6 -->
-		<div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal fade" id="itemModal6" tabindex="-1" role="dialog" aria-hidden="true">
 		
 			<div class="modal-dialog" role="document">
 			
@@ -924,7 +924,7 @@ if(session == null || session.getAttribute("fullName") == null){
 						
 					</div>
 					
-					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm" autocomplete="off">
+					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm6" autocomplete="off">
 
 
 					<div class="modal-body">
@@ -988,7 +988,7 @@ if(session == null || session.getAttribute("fullName") == null){
 
 
 		<!-- Item Selection Modal for Item 7 -->
-		<div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal fade" id="itemModal7" tabindex="-1" role="dialog" aria-hidden="true">
 			
 			<div class="modal-dialog" role="document">
 				
@@ -1000,7 +1000,7 @@ if(session == null || session.getAttribute("fullName") == null){
 					
 					</div>
 					
-					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm" autocomplete="off">
+					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm7" autocomplete="off">
 
 
 					<div class="modal-body">
@@ -1063,7 +1063,7 @@ if(session == null || session.getAttribute("fullName") == null){
 
 
 		<!-- Item Selection Modal for Item 8 -->
-		<div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal fade" id="itemModal8" tabindex="-1" role="dialog" aria-hidden="true">
 			
 			<div class="modal-dialog" role="document">
 				
@@ -1075,7 +1075,7 @@ if(session == null || session.getAttribute("fullName") == null){
 					
 					</div>
 					
-					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm" autocomplete="off">
+					 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm8" autocomplete="off">
 
 
 					<div class="modal-body">
@@ -1140,7 +1140,7 @@ if(session == null || session.getAttribute("fullName") == null){
 
 
 		<!-- Item Selection Modal for Item 9 -->
-		<div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal fade" id="itemModal9" tabindex="-1" role="dialog" aria-hidden="true">
 			
 			<div class="modal-dialog" role="document">
 				
@@ -1152,7 +1152,7 @@ if(session == null || session.getAttribute("fullName") == null){
 					
 					</div>
 					
-				 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm" autocomplete="off">
+				 <form name="AddtoCartForm" method="post" action="${pageContext.request.contextPath}/addToCartController" id="itemForm9" autocomplete="off">
 
 
 					<div class="modal-body">
@@ -1212,16 +1212,18 @@ if(session == null || session.getAttribute("fullName") == null){
  // Function to open the modal and populate details
  function openModal(id, title, description) {
 	 
-    selectedItem.id = id; // Save item ID
-    
-    selectedItem.title = title; // Save item title
-    
-    document.getElementById('itemModalLabel').textContent = title;
-    
-    document.getElementById('itemDescription').textContent = description;
-
-    // Open the modal
-    $('#itemModal').modal('show');
+	 selectedItem.id = id;
+	    selectedItem.title = title;
+	    
+	    // Get the specific modal for this item
+	    var modal = $('#itemModal' + id);
+	    
+	    // Update the modal content
+	    modal.find('.modal-title').text(title);
+	    modal.find('#itemDescription').text(description);
+	    
+	    // Open the correct modal
+	    modal.modal('show');
     
     
  }//closing brace of the 'openModal()' method.
