@@ -70,6 +70,9 @@ if(session == null || session.getAttribute("fullName") == null){
 
 <body>
 
+
+
+
 <!-- if adding item into the Cart failed! this message will be shown -->
 <c:if test="${not empty sessionScope.addToCartErrorMessage}">
 

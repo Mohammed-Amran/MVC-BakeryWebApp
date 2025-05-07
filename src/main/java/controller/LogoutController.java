@@ -26,6 +26,7 @@ public class LogoutController extends HttpServlet {
 		
 		HttpSession session = req.getSession(false); //That false within the 'getSession(false)' is to not create if not exists
 		
+		
 		String email = (String) session.getAttribute("email");
 		
 		
