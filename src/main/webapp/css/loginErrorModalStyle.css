@@ -1,0 +1,68 @@
+/* Login Error Modal Styles */
+
+#loginErrorModal .modal-content {
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    font-family: "Poppins", serif;
+}
+
+/* Header: Centered Title, Red Background */
+#loginErrorModal .modal-header {
+    background-color: #ff3d00; /* Bright red */
+    color: #ffffff;
+    text-align: center;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 15px 20px;
+}
+
+#loginErrorModal .modal-title {
+    font-size: 22px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    font-family: "Poppins", serif;
+    margin: 0;
+}
+
+
+
+/* Body: Centered Message */
+#loginErrorModal .modal-body {
+    font-family: "Poppins", serif;
+    color: #2e2e2e; /* Brighter black */
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Footer */
+#loginErrorModal .modal-footer {
+    border-top: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+#loginErrorModal .btn {
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-family: "Poppins", serif;
+}
+
+#loginErrorModal .btn-secondary {
+    background-color: #6c757d;
+    color: #ffffff;
+    border: none;
+}
+
+#loginErrorModal .btn-secondary:hover {
+    background-color: #5a6268;
+}

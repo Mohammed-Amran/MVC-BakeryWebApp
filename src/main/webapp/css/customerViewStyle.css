@@ -139,6 +139,8 @@ body {
     background-color: #ddbea9;
     margin: 0;
     padding: 0;
+    background: url('https://www.homestratosphere.com/wp-content/uploads/2020/07/ciabatta-bread-july222020-min.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the entire background */
 }
 
 

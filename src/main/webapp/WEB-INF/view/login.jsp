@@ -16,6 +16,11 @@
 <title>Login Page</title>
 
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/loginStyle.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/loginErrorModalStyle.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
 </head>
 
@@ -24,41 +29,42 @@
 <body>
 
 
-<!-- If login failed! this pop-up window will be shown -->
+<!-- If login failed! the 'Login-Error' pop-up window will be shown -->
 <c:if test="${not empty loginError}">
-    
-    <script type="text/javascript">
-    
-      alert('${loginError}');
-      
-    </script>
-    
-  </c:if>
+
+  <script type="text/javascript">
+  
+    window.onload = function () { $('#loginErrorModal').modal('show'); };
+ 
+  </script>
+  
+</c:if>
 
  
- 
-<!-- If session expired! this pop-up window will be shown --> 
+<!-- If session expired! the 'SessionExpired-alert' pop-up window will be shown --> 
 <c:if test="${not empty param.sessionExpiredMessage}">
+
+  <script type="text/javascript">
+  
+    $(document).ready(function () { $('#sessionExpiredModal').modal('show'); });
     
-    <script type="text/javascript">
-    
-      alert('${param.sessionExpiredMessage}');
-      
-    </script>
-    
-  </c:if>
+  </script>
+  
+</c:if>
+
   
   
- <!-- If user Logs out! this pop-up window will be shown --> 
+<!-- If the user logged out! the 'Logout-alert' pop-up window will be shown -->  
 <c:if test="${not empty requestScope.logOutMessage}">
-    
-    <script type="text/javascript">
-    
-      alert('${requestScope.logOutMessage}');
-      
-    </script>
-    
-  </c:if> 
+  
+  <script type="text/javascript">
+ 
+   $(document).ready(function () { $('#logoutModal').modal('show'); });
+ 
+   </script>
+  
+</c:if>
+ 
   
   
 
@@ -107,8 +113,106 @@
 
 
 
+	<!-- Login Error Modal -->
+	<div class="modal fade" id="loginErrorModal" tabindex="-1" role="dialog" aria-labelledby="loginErrorModalLabel" aria-hidden="true">
+		
+		<div class="modal-dialog" role="document">
+			
+			<div class="modal-content">
+
+				<div class="modal-header">
+				
+					<h5 class="modal-title" id="loginErrorModalLabel">Login Failed</h5>
+					
+						
+				</div>
 
 
+				<div class="modal-body">
+				
+					<p> <c:out value="${loginError}" /> </p>
+					
+				</div>
+
+
+
+				<div class="modal-footer">
+				
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					
+				</div>
+
+
+			</div>
+			
+		</div>
+		
+	</div>
+	<!-- closing brace of the error message pop-up modal -->
+
+
+    <!-- Session Expired Modal -->
+	<div class="modal fade" id="sessionExpiredModal" tabindex="-1" role="dialog" aria-labelledby="sessionExpiredModalLabel" aria-hidden="true">
+		
+		<div class="modal-dialog" role="document">
+
+			<div class="modal-content">
+
+				<div class="modal-header">
+					
+					<h5 class="modal-title" id="sessionExpiredModalLabel">Session Expired</h5>
+				
+				</div>
+
+				<div class="modal-body">
+					
+					<p> <c:out value="${param.sessionExpiredMessage}" /> </p>
+					
+				</div>
+
+				<div class="modal-footer">
+				
+					<button type="button" class="btn btn-secondary" data-dismiss="modal"> Close </button>
+					
+				</div>
+
+			</div>
+
+		</div>
+		
+	</div> <!-- Closing tag of the 'Session Expired' modal -->
+
+
+   <!-- Logout Message Modal -->
+	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+		
+		<div class="modal-dialog" role="document">
+
+			<div class="modal-content">
+
+				<div class="modal-header">
+				
+					<h5 class="modal-title" id="logoutModalLabel">Logged Out</h5>
+					
+				</div>
+
+				<div class="modal-body">
+					
+					<p> <c:out value="${requestScope.logOutMessage}" /> </p>
+				
+				</div>
+
+				<div class="modal-footer">
+					
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					
+				</div>
+
+			</div>
+
+		</div>
+		
+	</div> <!-- Closing tag of the 'Logout Message' modal -->
 
 
 
