@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+body {
+    font-family: "Helvetica Neue", HelveticaNeue, Arial, sans-serif;
+    margin: 0;
+    background: url('https://www.homestratosphere.com/wp-content/uploads/2020/07/ciabatta-bread-july222020-min.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+/* Appbar Styles */
+.appbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.appbar-brand h1 {
+    font-family: 'Parisienne', cursive;
+    font-size: 28px;
+    color: #7f5539;
+    margin: 0;
+}
+
+.appbar-actions {
+    display: flex;
+    gap: 15px;
+}
+
+/* Button Styles */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    background-color: #7f5539;
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: #370617;
+}
+
+.signup-btn {
+    background-color: #ddbea9;
+    color: #333;
+}
+
+.signup-btn:hover {
+    background-color: #cb997e;
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+/* Hero Section */
+.hero {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+.hero-content h2 {
+    font-family: 'Parisienne', cursive;
+    font-size: 36px;
+    color: #7f5539;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+/* Menu Section */
+.menu-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-title {
+    text-align: center;
+    font-family: 'Parisienne', cursive;
+    font-size: 32px;
+    color: #7f5539;
+    margin-bottom: 30px;
+}
+
+.menu-items {
+    /* Will be styled when menu items are added */
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 50px;
+    font-size: 14px;
+    color: #666;
+}
+
+
+
+

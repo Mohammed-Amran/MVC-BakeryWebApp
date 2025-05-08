@@ -3,7 +3,7 @@
   <display-name>BakeryOrderingSystem</display-name>
   <welcome-file-list>
   
-    <welcome-file>/WEB-INF/view/login.jsp</welcome-file>
+    <welcome-file>/WEB-INF/view/viewerOnly.jsp</welcome-file>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>index.htm</welcome-file>
